@@ -32,6 +32,8 @@ public class PlayerMovement : MonoBehaviour {
     private float horizontalInput;
 
     private bool pressedJump;
+
+    private AudioSource audioSource;
     #endregion
 
 
@@ -47,7 +49,8 @@ public class PlayerMovement : MonoBehaviour {
     // Use this for initialization
     void Start ()
     {
-        myRigidbody2D = GetComponent<Rigidbody2D>();  
+        myRigidbody2D = GetComponent<Rigidbody2D>();
+        audioSource = GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
@@ -77,6 +80,7 @@ public class PlayerMovement : MonoBehaviour {
         {
             myRigidbody2D.velocity =
                 new Vector2(myRigidbody2D.velocity.x, jumpHeight);
+            audioSource.Play();
 
             isOnGround = false;
         }
