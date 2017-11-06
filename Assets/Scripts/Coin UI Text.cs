@@ -4,16 +4,18 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class CoinUIText : MonoBehaviour {
-
+    [SerializeField]
     private Text text;
 
 	// Use this for initialization
-	void Start () {
-		
+	void Start ()
+    {
+        text = GetComponent(Text)();
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		
+	void Update ()
+    {
+        text.text = "Coin Count " + Coin.CoinCount;
 	}
 }
