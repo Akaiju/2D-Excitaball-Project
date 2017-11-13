@@ -8,15 +8,15 @@ public class QuitButton : MonoBehaviour
     [SerializeField]
     GameObject QuitPanel;
 
-    public void QuitGame()
-    {
-        Application.Quit();
-    }
 
     public void ThirdLevelQuit()
     {
         QuitPanel.SetActive(true);
 
+    }
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 
     public void OnTriggerEnter2D(Collider2D collision)
