@@ -10,12 +10,12 @@ public class CoinUIText : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
     {
-        text = GetComponent(Text)();
+       
 	}
 	
 	// Update is called once per frame
 	void Update ()
     {
-        text.text = "Coin Count " + Coin.CoinCount;
+       
 	}
 }
